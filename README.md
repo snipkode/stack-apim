@@ -21,8 +21,8 @@ Prasyarat Memulai :
 ```
   Terminal :
   
-  RUN  $ git clone https://github.com/admhabits/generate-wso2-apim.git
-  RUN  $ git checkout branch setup
+  RUN  $ git clone https://github.com/snipkode/stack-apim.git
+  RUN  $ git checkout branch master
     
 ```
 
@@ -31,7 +31,7 @@ Prasyarat Memulai :
 ```
   Terminal:
   
-  RUN $ cd apim && code .
+  RUN $ okteto stack deploy
     
 ```
 
