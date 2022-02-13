@@ -132,9 +132,10 @@ RUN \
     && ls && echo "\n"\
     \
     && ls && echo "\n" \
-    && ${USER_HOME}/deployment.toml ${WSO2_SERVER_HOME}/repository/conf/ \
     && cp -r ${WSO2_SERVER_HOME}/repository/deployment/server/synapse-configs ${USER_HOME}/${USER_GROUP}-tmp \
     && cp -r ${WSO2_SERVER_HOME}/repository/deployment/server/executionplans ${USER_HOME}/${USER_GROUP}-tmp 
+
+COPY --chown=wso2carbon:wso2 deployment.toml ${WSO2_SERVER_HOME}/repository/conf/
 
 # atur pengguna dan direktori kerja
 USER ${USER_ID}
