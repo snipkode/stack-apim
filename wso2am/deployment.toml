@@ -1,5 +1,5 @@
 [server]
-hostname = "snipkode.cloud.okteto.net"
+hostname = "stage-snipkode.cloud.okteto.net"
 base_path = "https://wso2am-$ref{server.hostname}"
 server_role = "default"
 
