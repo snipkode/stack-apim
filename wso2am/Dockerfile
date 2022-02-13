@@ -132,7 +132,7 @@ RUN \
     && ls && echo "\n"\
     \
     && ls && echo "\n" \
-    && rm -rf ${WSO2_SERVER_HOME}/repository/conf/deployment.toml 
+    && rm -rf ${WSO2_SERVER_HOME}/repository/conf/deployment.toml \
     && cp -r ${WSO2_SERVER_HOME}/repository/deployment/server/synapse-configs ${USER_HOME}/${USER_GROUP}-tmp \
     && cp -r ${WSO2_SERVER_HOME}/repository/deployment/server/executionplans ${USER_HOME}/${USER_GROUP}-tmp 
 
