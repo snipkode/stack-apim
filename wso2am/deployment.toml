@@ -1,6 +1,6 @@
 [server]
-hostname = "stage-snipkode.cloud.okteto.net"
-base_path = "https://wso2am-$ref{server.hostname}"
+hostname = "wso2am-stage-snipkode.cloud.okteto.net"
+base_path = "https://$ref{server.hostname}"
 server_role = "default"
 
 [super_admin]
@@ -50,13 +50,13 @@ type = "hybrid"
 display_in_api_console = true
 description = "This is a hybrid gateway that handles both production and sandbox token traffic."
 show_as_token_endpoint_url = true
-service_url = "https://gateways-$ref{server.hostname}/services/"
+service_url = "https://gateways-stage-snipkode.cloud.okteto.net/services/"
 username= "${admin.username}"
 password= "${admin.password}"
 ws_endpoint = "ws://localhost:9099"
 wss_endpoint = "wss://localhost:8099"
-http_endpoint = "http://gateways2-$ref{server.hostname}"
-https_endpoint = "https://gateways-$ref{server.hostname}"
+http_endpoint = "http://gateways2-stage-snipkode.cloud.okteto.net"
+https_endpoint = "https://gateways-stage-snipkode.cloud.okteto.net"
 websub_event_receiver_http_endpoint = "http://localhost:9021"
 websub_event_receiver_https_endpoint = "https://localhost:8021"
 
@@ -65,11 +65,11 @@ gateway_labels =["Default"]
 
 [apim.analytics]
 enable = false
-config_endpoint = "https://analitycs-$ref{server.hostname}/auth/v1"
+config_endpoint = "https://analitycs-stage-snipkode.cloud.okteto.net/auth/v1"
 auth_token = ""
 
 [apim.devportal]
-url = "https://wso2am-$ref{server.hostname}/devportal"
+url = "https://wso2am-stage-snipkode.cloud.okteto.net/devportal"
 
 [apim.cors]
 allow_origins = "*"
