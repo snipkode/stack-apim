@@ -64,7 +64,7 @@ websub_event_receiver_https_endpoint = "https://localhost:8021"
 gateway_labels =["Default"]
 
 [apim.analytics]
-enable = false
+enable = true
 config_endpoint = "https://analitycs-stage-snipkode.cloud.okteto.net/auth/v1"
 auth_token = ""
 
