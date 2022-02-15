@@ -53,12 +53,12 @@ show_as_token_endpoint_url = true
 service_url = "https://gateways-stage-snipkode.cloud.okteto.net/services/"
 username= "${admin.username}"
 password= "${admin.password}"
-ws_endpoint = "ws://localhost:9099"
-wss_endpoint = "wss://localhost:8099"
+ws_endpoint = "ws://ws2-stage-snipkode.cloud.okteto.net"
+wss_endpoint = "wss://ws-stage-snipkode.cloud.okteto.net"
 http_endpoint = "http://gateways2-stage-snipkode.cloud.okteto.net"
 https_endpoint = "https://gateways-stage-snipkode.cloud.okteto.net"
-websub_event_receiver_http_endpoint = "http://localhost:9021"
-websub_event_receiver_https_endpoint = "https://localhost:8021"
+websub_event_receiver_http_endpoint = "http://websub2-stage-snipkode.cloud.okteto.net"
+websub_event_receiver_https_endpoint = "https://websub-stage-snipkode.cloud.okteto.net"
 
 [apim.sync_runtime_artifacts.gateway]
 gateway_labels =["Default"]
