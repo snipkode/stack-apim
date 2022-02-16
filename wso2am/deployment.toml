@@ -60,6 +60,34 @@ https_endpoint = "https://gateways-stage-snipkode.cloud.okteto.net"
 websub_event_receiver_http_endpoint = "http://websub2-stage-snipkode.cloud.okteto.net"
 websub_event_receiver_https_endpoint = "https://websub-stage-snipkode.cloud.okteto.net"
 
+[[apim.gateway.environment]]
+name = "Production"
+type = "production"
+display_in_api_console = true
+description = "This is the gateway that handles production token traffic."
+show_as_token_endpoint_url = true
+service_url = "https://localhost:9445/services/"
+username= "admin"
+password= "admin"
+ws_endpoint = "ws://localhost:9099"
+wss_endpoint = "wss://localhost:8099"
+http_endpoint = "http://localhost:8282"
+https_endpoint = "https://localhost:8245"
+
+[[apim.gateway.environment]]
+name = "Sandbox"
+type = "sandbox"
+display_in_api_console = true
+description = "This is the gateway that handles sandbox token traffic."
+show_as_token_endpoint_url = false
+service_url = "https://localhost:9448/services/"
+username= "admin"
+password= "admin"
+ws_endpoint = "ws://localhost:9199"
+wss_endpoint = "wss://localhost:8199"
+http_endpoint = "http://localhost:8285"
+https_endpoint = "https://localhost:8248"
+
 [apim.sync_runtime_artifacts.gateway]
 gateway_labels =["Default"]
 
