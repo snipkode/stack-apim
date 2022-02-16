@@ -96,6 +96,7 @@ RUN \
 
 RUN \
     sudo whoami \
+    && npm install -g wscat \
     && wget -O ${REPOSITORY_NAME}-${GIT_BRANCH}.zip "${WSO2_GITHUB_SOURCE_CODE}" \
     && unzip -d ${USER_HOME} ${REPOSITORY_NAME}-${GIT_BRANCH}.zip \
     \
