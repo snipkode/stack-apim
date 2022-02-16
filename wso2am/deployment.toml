@@ -89,7 +89,7 @@ http_endpoint = "http://localhost:8285"
 https_endpoint = "https://localhost:8248"
 
 [apim.sync_runtime_artifacts.gateway]
-gateway_labels =["Default"]
+gateway_labels =["Default", "Sandbox", "Production"]
 
 [apim.analytics]
 enable = true
