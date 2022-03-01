@@ -124,3 +124,6 @@ proxyPort = 443
 #ENABLE ADMIN SERVICES WSDL
 [admin_service.wsdl]
 enable = true
+
+[apim.sdk]
+supported_languages = ["android", "java", "scala", "csharp", "dart", "flash", "groovy", "javascript"]
