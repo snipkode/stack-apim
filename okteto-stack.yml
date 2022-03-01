@@ -22,6 +22,22 @@ services:
       timeout: 60s
       retries: 5
       start_period: 80s
+      
+  myadmin:
+      image: phpmyadmin/phpmyadmin
+      ports:
+        - 8080
+        - 80
+      labels:
+        app: myadmin
+      restart: unless-stopped
+      environment:
+        - PMA_HOST=mysql
+        - PMA_PORT=3306
+        - MYSQL_USER=wso2carbon
+        - MYSQL_PASSWORD=wso2carbon
+        - MYSQL_ROOT_PASSWORD=root
+        
   wso2am:
     build: wso2am
     healthcheck:
@@ -46,20 +62,6 @@ services:
     annotations:
       # dev.okteto.com/auto-ingress: "apim"
       # nginx.ingress.kubernetes.io/backend-protocol: HTTPS
- myadmin:
-    image: phpmyadmin/phpmyadmin
-    ports:
-      - 8080
-      - 80
-    labels:
-      app: myadmin
-    restart: unless-stopped
-    environment:
-      - PMA_HOST=mysql
-      - PMA_PORT=3306
-      - MYSQL_USER=wso2carbon
-      - MYSQL_PASSWORD=wso2carbon
-      - MYSQL_ROOT_PASSWORD=root
 
 endpoints:
   wso2am:
