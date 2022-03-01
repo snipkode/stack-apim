@@ -1,0 +1,19 @@
+FROM wso2/wso2am:4.0.0
+
+# Copy Custom Jagery Apps
+RUN rm -rf ${WSO2_SERVER_HOME}/repository/deployment/server/jaggeryapps
+COPY --chown=wso2carbon:wso2 $Portal_App_PATH ${WSO2_SERVER_HOME}/repository/deployment/server
+
+# Copy Custom Authentification Page
+RUN rm -rf ${WSO2_SERVER_HOME}/repository/deployment/server/webapps/authenticationendpoint
+COPY --chown=wso2carbon:wso2 authenticationendpoint ${WSO2_SERVER_HOME}/repository/deployment/server/webapps/authenticationendpoint
+RUN rm -rf ${WSO2_SERVER_HOME}/repository/deployment/server/webapps/accountrecoveryendpoint
+COPY --chown=wso2carbon:wso2 accountrecoveryendpoint ${WSO2_SERVER_HOME}/repository/deployment/server/webapps/accountrecoveryendpoint
+
+# Copy devportal default
+RUN rm -rf ${WSO2_SERVER_HOME}/repository/components/plugins/org.wso2.am.styles_4.0.0.jar
+COPY --chown=wso2carbon:wso2 components/org.wso2.am.styles_4.0.0.jar ${WSO2_SERVER_HOME}/repository/components/plugins/org.wso2.am.styles_4.0.0.jar
+COPY --chown=wso2carbon:wso2 components/splp-metric-publisher-1.0-SNAPSHOT.jar ${WSO2_SERVER_HOME}/repository/components/lib/splp-metric-publisher-1.0-SNAPSHOT.jar
+
+RUN mv ${WSO2_SERVER_HOME}/repository/conf/log4j2.properties ${WSO2_SERVER_HOME}/repository/conf/log4j2.properties.backup
+COPY --chown=wso2carbon:wso2 conf/log4j2.properties ${WSO2_SERVER_HOME}/repository/conf/log4j2.properties
