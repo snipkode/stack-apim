@@ -1,5 +1,5 @@
 [server]
-hostname = "wso2am-stage-snipkode.cloud.okteto.net"
+hostname = "wso2am-9443-snipkode.cloud.okteto.net"
 base_path = "https://$ref{server.hostname}"
 server_role = "default"
 
@@ -111,7 +111,7 @@ config_endpoint = "https://analitycs-stage-snipkode.cloud.okteto.net/auth/v1"
 auth_token = ""
 
 [apim.devportal]
-url = "https://wso2am-stage-snipkode.cloud.okteto.net/devportal"
+url = "https://wso2am-9443-snipkode.cloud.okteto.net/devportal"
 
 [apim.cors]
 allow_origins = "*"
