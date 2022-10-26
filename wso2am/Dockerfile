@@ -123,6 +123,7 @@ RUN \
     && echo "\n\ ===== SETUP GLOBAL GIT =====" \
     && git config --global user.email ${EMAIL} \
     && git config --global user.user ${USERNAME} \
+    && git config --global --add safe.directory /home/admhabits/wso2am-4.0.0-master \
     \
     && git init \
     && git remote add origin ${WSO2_GITHUB_REMOTE_LINK} \
