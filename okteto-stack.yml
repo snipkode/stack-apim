@@ -68,10 +68,10 @@ endpoints:
     - path: /
       service: wso2am
       port: 9443
-  phpmyadmin:
-  - path: /
-    service: myadmin
-    port: 80
+#   phpmyadmin:
+#     - path: /
+#       service: myadmin
+#       port: 80
   analitycs:
     - path: /
       service: wso2am
