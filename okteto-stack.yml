@@ -63,41 +63,41 @@ services:
       # dev.okteto.com/auto-ingress: "apim"
       # nginx.ingress.kubernetes.io/backend-protocol: HTTPS
 
-endpoints:
-  wso2am:
-    - path: /
-      service: wso2am
-      port: 9443
+# endpoints:
+#   wso2am:
+#     - path: /
+#       service: wso2am
+#       port: 9443
 #   phpmyadmin:
 #     - path: /
 #       service: myadmin
 #       port: 80
-  analitycs:
-    - path: /
-      service: wso2am
-      port: 8080
-  gateways:
-    - path: /
-      service: wso2am
-      port: 8243
-  gateways2:
-    - path: /
-      service: wso2am
-      port: 8280
-  websub:
-    - path: /
-      service: wso2am
-      port: 8021
-  websub2:
-    - path: /
-      service: wso2am
-      port: 9021
-  ws:
-    - path: /
-      service: wso2am
-      port: 8099
-  ws2:
-    - path: /
-      service: wso2am
-      port: 9099
+#   analitycs:
+#     - path: /
+#       service: wso2am
+#       port: 8080
+#   gateways:
+#     - path: /
+#       service: wso2am
+#       port: 8243
+#   gateways2:
+#     - path: /
+#       service: wso2am
+#       port: 8280
+#   websub:
+#     - path: /
+#       service: wso2am
+#       port: 8021
+#   websub2:
+#     - path: /
+#       service: wso2am
+#       port: 9021
+#   ws:
+#     - path: /
+#       service: wso2am
+#       port: 8099
+#   ws2:
+#     - path: /
+#       service: wso2am
+#       port: 9099
   
