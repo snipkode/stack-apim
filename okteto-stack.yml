@@ -1,4 +1,4 @@
-name: product-apim
+name: stack-apim
 services:
   mysql:
     image: mysql:5.7.34
@@ -28,8 +28,6 @@ services:
       ports:
         - 8080
         - 80
-      labels:
-        app: myadmin
       restart: unless-stopped
       environment:
         - PMA_HOST=mysql
