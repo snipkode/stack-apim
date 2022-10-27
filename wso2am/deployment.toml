@@ -64,13 +64,13 @@ type = "hybrid"
 display_in_api_console = true
 description = "This is a hybrid gateway that handles both production and sandbox token traffic."
 show_as_token_endpoint_url = true
-service_url = "https://gateways-stage-snipkode.cloud.okteto.net/services/"
+service_url = "https://wso2am-8243-snipkode.cloud.okteto.net/services/"
 username= "${admin.username}"
 password= "${admin.password}"
 ws_endpoint = "ws://ws2-stage-snipkode.cloud.okteto.net"
 wss_endpoint = "wss://ws-stage-snipkode.cloud.okteto.net"
 http_endpoint = "http://gateways2-stage-snipkode.cloud.okteto.net"
-https_endpoint = "https://gateways-stage-snipkode.cloud.okteto.net"
+https_endpoint = "https://wso2am-8243-snipkode.cloud.okteto.net"
 websub_event_receiver_http_endpoint = "http://websub2-stage-snipkode.cloud.okteto.net"
 websub_event_receiver_https_endpoint = "https://websub-stage-snipkode.cloud.okteto.net"
 
